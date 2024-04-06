@@ -125,3 +125,5 @@ for ax in axs:
 
 axs[0].set_ylabel("MB/s")
 axs[0].legend()
+
+plt.show()

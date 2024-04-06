@@ -74,7 +74,7 @@ def time_cv2(size, cratio=10) -> tuple[float, float]:
         temp_path = Path(temp_dir)
         data = np.random.randint(low=0, high=2**16, size=(size, size), dtype=dtype)
         fpath = temp_path / f"{size}.jp2"
-        
+
         start = time.time()
         cv2.imwrite(str(fpath), data, [cv2.IMWRITE_JPEG2000_COMPRESSION_X1000, 100])
         write_time = time.time() - start
@@ -95,7 +95,7 @@ def time_sitk(size, cratio=10) -> tuple[float, float]:
         temp_path = Path(temp_dir)
         data = np.random.randint(low=0, high=2**16, size=(size, size), dtype=dtype)
         fpath = temp_path / f"{size}.jp2"
-        
+
         start = time.time()
         cv2.imwrite(str(fpath), data, [cv2.IMWRITE_JPEG2000_COMPRESSION_X1000, 100])
         # SimpleITK crashses when writing a file...
@@ -152,4 +152,4 @@ axs[0].set_ylim(1, 100)
 axs[0].legend()
 axs[0].yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: str(int(x))))
 
-# %%
+plt.show()
