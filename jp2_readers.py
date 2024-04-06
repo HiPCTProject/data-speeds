@@ -130,7 +130,7 @@ for fmt, time_func in zip(['glymur', 'opencv', 'SimpleITK'][::-1], [time_glymur,
     results[fmt] = df
 
 # %%
-fig, axs = plt.subplots(ncols=2, figsize=(8, 4), sharey=True)
+fig, axs = plt.subplots(ncols=2, figsize=(8, 4), sharey=True, constrained_layout=True)
 
 for fmt in ['glymur', 'opencv', 'SimpleITK']:
     df = results[fmt]

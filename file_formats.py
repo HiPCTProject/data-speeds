@@ -106,7 +106,7 @@ for fmt, time_func in zip(['JPEG2000', "TIFF"], [time_jp2, time_tiff]):
     results[fmt] = df
 
 # %%
-fig, axs = plt.subplots(ncols=2, figsize=(8, 4), sharey=True)
+fig, axs = plt.subplots(ncols=2, figsize=(8, 4), sharey=True, constrained_layout=True)
 
 for fmt in ['JPEG2000', "TIFF"]:
     df = results[fmt]
